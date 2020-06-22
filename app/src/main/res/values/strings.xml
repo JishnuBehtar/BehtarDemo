@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BehtarDemo</string>
+    <string name="oil_pulses">Oil &amp; Ghee</string>
+    <string name="header">"TATA Salt TATA Salt \n TATA Salt "</string>
+    <string name="rs">₹ 369</string>
+    <string name="rssmall">₹ 369</string>
+</resources>

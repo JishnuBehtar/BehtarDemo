@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="165dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginLeft="26dp"
+    android:layout_marginRight="26dp">
+
+    <TextView
+        android:id="@+id/tv_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        tools:text="@string/oil_pulses"
+        android:fontFamily="@font/poppinslight"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:text="@string/oil_pulses"
+        />
+
+</RelativeLayout>
