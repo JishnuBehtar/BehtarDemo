@@ -4,4 +4,14 @@
     <string name="header">"TATA Salt TATA Salt \n TATA Salt "</string>
     <string name="rs">₹ 369</string>
     <string name="rssmall">₹ 369</string>
+    <string name="apply_coupon">Apply coupon</string>
+    <string name="bill_details">Bill details</string>
+    <string name="order_value">Order Value</string>
+    <string name="delivery_charges">Delivery charges (+)</string>
+    <string name="coupon_discount">Coupon Discount (-)</string>
+    <string name="total_payable">Total Payable</string>
+    <string name="contactless_delivery">Contact less delivery</string>
+    <string name="pay_online">Pay Online</string>
+    <string name="pay_on_delivery">Pay On Delivery</string>
+    <string name="total_saved">Total Saved</string>
 </resources>

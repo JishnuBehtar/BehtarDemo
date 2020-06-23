@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#efefef">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/im_offer"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/ic_offer" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:layout_toRightOf="@+id/im_offer"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="@string/apply_coupon"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:padding="10dp"
+                android:scaleY="2"
+                android:scaleX="2"
+                android:src="@drawable/ic_keyboard_arrow_right" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_amounts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:elevation="6dp"
+        app:cardCornerRadius="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_bill_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="@string/bill_details"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_order_value_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_bill_details"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinslight"
+                android:text="@string/order_value"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_order_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_bill_details"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinslight"
+                android:text="₹ 980"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_del_charges_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_value_label"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinslight"
+                android:text="@string/delivery_charges"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_del_charges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_order_value"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinslight"
+                android:text="₹ 20"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_cpns_disc_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_del_charges_label"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinslight"
+                android:text="@string/coupon_discount"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_cpn_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_del_charges"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinslight"
+                android:text="₹ 0"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_cpns_disc_label"
+                android:layout_marginTop="10dp"
+                android:background="#000000" />
+
+            <TextView
+                android:id="@+id/tv_total_payable_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_line"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="@string/total_payable"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_total_payable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_line"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="₹ 1010"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:elevation="2dp"
+        android:background="#dcd9cd"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="-15dp"
+        app:cardPreventCornerOverlap="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_total_saved_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsrregular"
+                android:text="@string/total_saved"
+                android:textColor="#ff4e00"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_total_saved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppinsrregular"
+                android:text="₹ 0"
+                android:textColor="#ff4e00"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_check_contactless_delivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="4dp"
+        app:strokeColor="#ff4e00"
+        app:cardCornerRadius="10dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <CheckBox
+            android:layout_marginLeft="10dp"
+            android:id="@+id/cb_check_contactless"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleX="2"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:scaleY="2"/>
+        
+        <TextView
+            android:id="@+id/tv_cnt_delivery"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contactless_delivery"
+            android:layout_toRightOf="@+id/cb_check_contactless"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Our delivery partner will call/ring after reaching after reaching &amp; leave the order at your door/gate , Not applicable for POD(Pay on delivery)"
+            android:layout_below="@+id/tv_cnt_delivery"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/cb_check_contactless"
+            android:fontFamily="@font/poppinsrregular"
+            android:textColor="#000000"
+            android:layout_marginRight="10dp"
+            android:textSize="10sp"
+            />
+
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_payment_methods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="4dp"
+        android:theme="@style/Theme.MaterialComponents.Light"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp">
+
+            <TextView
+                android:id="@+id/tv_payment_methods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinslight"
+                android:text="@string/bill_details"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_pay_online"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                >
+
+                <ImageView
+                    android:id="@+id/im_onl_pay"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_online_pay"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_pay_online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="#000000"
+                    android:textSize="19sp"
+                    android:text="@string/pay_online"
+                    android:layout_toRightOf="@+id/im_onl_pay"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_pay_online_meths"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@+id/tv_pay_online"
+                    android:fontFamily="@font/poppinsrregular"
+                    android:textColor="#8a8a8a"
+                    android:textSize="10sp"
+                    android:text="Pay via Credit / Debit / Net Banking / \n UPI / Wallet / Pay later"
+                    android:layout_toRightOf="@+id/im_onl_pay"
+                    />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:padding="10dp"
+                    android:id="@+id/im_onl_arrow"
+                    android:scaleY="2"
+                    android:scaleX="2"
+                    android:src="@drawable/ic_keyboard_arrow_right" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view_line_2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_cpns_disc_label"
+                android:layout_marginTop="10dp"
+                android:background="#efefef" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/rl_pay_offline"
+                >
+
+                <ImageView
+                    android:id="@+id/im_pay_off"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_offline_pay"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_pay_offline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textColor="#000000"
+                    android:textSize="19sp"
+                    android:text="@string/pay_on_delivery"
+                    android:layout_toRightOf="@+id/im_pay_off"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_pay_offline_meths"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@+id/tv_pay_offline"
+                    android:fontFamily="@font/poppinsrregular"
+                    android:textColor="#8a8a8a"
+                    android:textSize="10sp"
+                    android:text="Pay via cash is currently disabled for \n contactless delivery"
+                    android:layout_toRightOf="@+id/im_pay_off"
+                    />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:padding="10dp"
+                    android:scaleY="2"
+                    android:id="@+id/im_off_arrow"
+                    android:scaleX="2"
+                    android:src="@drawable/ic_keyboard_arrow_right" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>
+</ScrollView>
